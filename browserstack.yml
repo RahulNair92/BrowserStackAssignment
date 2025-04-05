@@ -1,0 +1,32 @@
+#userName: rahulnair_g5BHyN
+#accessKey: 3bqczA7fwLTx9HucHRat
+userName: rahulrnair_MIhUso
+accessKey: biXWx7zLcFMfsf9fXxki
+platforms:
+  - browserName: chrome
+    osVersion: 13.0
+    deviceName: Samsung Galaxy S23 Ultra
+  - browserName: safari
+    osVersion: 15
+    deviceName: iPhone 13
+  - browserName: Chrome
+    os: Windows
+    osVersion: 11
+    browserVersion: latest
+  - browserName: Edge
+    os: Windows
+    osVersion: 11
+    browserVersion: latest
+  - browserName: Chrome
+    os: OS X
+    osVersion: Ventura
+    browserVersion: latest
+
+browserstackLocal: false
+buildName: bstack-demo
+buildIdentifier: ${BUILD_NUMBER}
+projectName: BrowserStack Sample
+debug: true
+networkLogs: true
+consoleLogs: info
+parallelsPerPlatform: 5

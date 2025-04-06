@@ -23,7 +23,7 @@ public class BaseTest {
     String website = "https://elpais.com/";
 
     @BeforeMethod
-    public void setup() throws MalformedURLException {
+    public void setup() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         Object deviceName = ((RemoteWebDriver)driver)

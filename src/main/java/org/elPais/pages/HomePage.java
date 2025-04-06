@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
 public class HomePage extends BasePage{
 
@@ -27,7 +26,7 @@ public class HomePage extends BasePage{
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement opinion = wait.until(ExpectedConditions.presenceOfElementLocated(opinionLink));
-        js.executeScript("arguments[0].scrollIntoView(true);", opinion); // Scroll to element
+        js.executeScript("arguments[0].scrollIntoView(true);", opinion);
         js.executeScript("arguments[0].click();", opinion);
         return new OpinionPage(driver);
     }
@@ -47,7 +46,8 @@ public class HomePage extends BasePage{
                     .click();
 
         }catch (TimeoutException e){
-
+            //in few devices the banner didnt appear.
+            // Hence ignore error in case of timeout exception
         }
 
     }
